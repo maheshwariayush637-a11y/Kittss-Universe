@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Kitss Universe</title>
+<meta name="description" content="A private galaxy of planets, made just for you." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Boot sequence -->
+  <div id="boot-screen">
+    <div class="boot-inner">
+      <p class="boot-line">Connecting to <span>Kitss Universe</span><span class="dots">...</span></p>
+      <div class="boot-bar"><div class="boot-bar-fill" id="boot-fill"></div></div>
+      <p class="boot-percent" id="boot-percent">0%</p>
+    </div>
+  </div>
+
+  <!-- Persistent canvases -->
+  <canvas id="star-canvas"></canvas>
+  <canvas id="fx-canvas"></canvas>
+
+  <!-- Warp overlay -->
+  <div id="warp-overlay"><canvas id="warp-canvas"></canvas></div>
+
+  <!-- Music control -->
+  <button id="music-toggle" class="music-btn" aria-label="Play music">
+    <span class="music-icon">♪</span>
+    <span class="music-label">Love Story · piano</span>
+  </button>
+  <audio id="bg-audio" src="assets/audio/love-story-piano.mp3" loop preload="none"></audio>
+
+  <!-- Memory collection tray -->
+  <div id="collection-tray" aria-label="Memory collection">
+    <span class="tray-label">Memories</span>
+    <div class="tray-orbs" id="tray-orbs"></div>
+  </div>
+
+  <!-- Main stage -->
+  <main id="stage">
+    <div id="planet-scenes"></div>
+
+    <!-- Unlock overlay -->
+    <div id="unlock-overlay">
+      <div class="unlock-ring"></div>
+      <div class="unlock-ring ring-2"></div>
+      <p class="unlock-text">Planet Discovered</p>
+    </div>
+
+    <!-- Rocket navigation -->
+    <button id="rocket-nav" aria-label="Fly to next planet">
+      <svg id="rocket-trail" class="rocket-trail"></svg>
+      <span class="rocket-body">🚀</span>
+      <span class="rocket-caption">Next Planet</span>
+    </button>
+  </main>
+
+  <!-- Ending scene -->
+  <section id="ending-scene">
+    <canvas id="k-canvas"></canvas>
+    <p class="ending-message">To be continued...</p>
+    <button id="restart-btn">Restart the Journey</button>
+  </section>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
